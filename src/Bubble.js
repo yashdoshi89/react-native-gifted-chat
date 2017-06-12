@@ -9,6 +9,10 @@ import {
 
 import MessageText from './MessageText';
 import MessageImage from './MessageImage';
+import MessageHelpOptions from './MessageHelpOptions';
+import RepairPriceCheck from './RepairPriceCheck';
+import RepairConcierge from './RepairConcierge';
+import TypeOfProblem from './TypeOfProblem';
 import Time from './Time';
 
 import { isSameUser, isSameDay, warnDeprecated } from './utils';
@@ -40,6 +44,38 @@ export default class Bubble extends React.Component {
         return this.props.renderMessageText(messageTextProps);
       }
       return <MessageText {...messageTextProps}/>;
+    }
+    return null;
+  }
+
+  renderMessageHelp() {
+    if (this.props.currentMessage.help) {
+      const {containerStyle, wrapperStyle, ...messageHelpProps} = this.props;
+      return <MessageHelpOptions {...messageHelpProps}/>;
+    }
+    return null;
+  }
+
+  renderMessageRepairPriceCheck() {
+    if (this.props.currentMessage.repairPriceCheck) {
+      const {containerStyle, wrapperStyle, ...repairPriceCheckProps} = this.props;
+      return <RepairPriceCheck {...repairPriceCheckProps}/>;
+    }
+    return null;
+  }
+
+  renderMessageRepairConcierge() {
+    if (this.props.currentMessage.repairConcierge) {
+      const {containerStyle, wrapperStyle, ...repairConciergeProps} = this.props;
+      return <RepairConcierge {...repairConciergeProps}/>;
+    }
+    return null;
+  }
+
+  renderMessageTypeOfProblem() {
+    if (this.props.currentMessage.typeOfProblem) {
+      const {containerStyle, wrapperStyle, ...typeOfProblemProps} = this.props;
+      return <TypeOfProblem {...typeOfProblemProps}/>;
     }
     return null;
   }
@@ -93,7 +129,7 @@ export default class Bubble extends React.Component {
 
   onLongPress() {
     if (this.props.onLongPress) {
-      this.props.onLongPress(this.context, this.props.currentMessage);
+      this.props.onLongPress(this.context);
     } else {
       if (this.props.currentMessage.text) {
         const options = [
@@ -126,10 +162,14 @@ export default class Bubble extends React.Component {
             {...this.props.touchableProps}
           >
             <View>
+              {this.renderMessageHelp()}
+              {this.renderMessageRepairConcierge()}
+              {this.renderMessageTypeOfProblem()}
+              {this.renderMessageRepairPriceCheck()}
               {this.renderCustomView()}
               {this.renderMessageImage()}
               {this.renderMessageText()}
-              <View style={[styles.bottom, this.props.bottomContainerStyle[this.props.position]]}>
+              <View style={styles.bottom}>
                 {this.renderTime()}
                 {this.renderTicks()}
               </View>
@@ -216,7 +256,6 @@ Bubble.defaultProps = {
   previousMessage: {},
   containerStyle: {},
   wrapperStyle: {},
-  bottomContainerStyle: {},
   tickStyle: {},
   containerToNextStyle: {},
   containerToPreviousStyle: {},
@@ -241,10 +280,6 @@ Bubble.propTypes = {
     right: View.propTypes.style,
   }),
   wrapperStyle: React.PropTypes.shape({
-    left: View.propTypes.style,
-    right: View.propTypes.style,
-  }),
-  bottomContainerStyle: React.PropTypes.shape({
     left: View.propTypes.style,
     right: View.propTypes.style,
   }),

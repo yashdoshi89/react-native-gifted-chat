@@ -1,7 +1,13 @@
-import React from "react";
-import {Image, StyleSheet, View} from "react-native";
-import GiftedAvatar from "./GiftedAvatar";
-import {isSameUser, isSameDay, warnDeprecated} from "./utils";
+import React from 'react';
+import {
+  Image,
+  StyleSheet,
+  View,
+} from 'react-native';
+
+import GiftedAvatar from './GiftedAvatar';
+
+import { isSameUser, isSameDay, warnDeprecated } from './utils';
 
 export default class Avatar extends React.Component {
   renderAvatar() {
@@ -13,21 +19,12 @@ export default class Avatar extends React.Component {
       <GiftedAvatar
         avatarStyle={StyleSheet.flatten([styles[this.props.position].image, this.props.imageStyle[this.props.position]])}
         user={this.props.currentMessage.user}
-        onPress={() => this.props.onPressAvatar && this.props.onPressAvatar(this.props.currentMessage.user)}
       />
     );
   }
 
   render() {
-    const renderAvatarOnTop = this.props.renderAvatarOnTop;
-    const messageToCompare = renderAvatarOnTop ? this.props.previousMessage : this.props.nextMessage;
-    const computedStyle = renderAvatarOnTop ? "onTop" : "onBottom"
-
-    if (this.props.renderAvatar === null) {
-      return null
-    }
-
-    if (isSameUser(this.props.currentMessage, messageToCompare) && isSameDay(this.props.currentMessage, messageToCompare)) {
+    if (isSameUser(this.props.currentMessage, this.props.nextMessage) && isSameDay(this.props.currentMessage, this.props.nextMessage)) {
       return (
         <View style={[styles[this.props.position].container, this.props.containerStyle[this.props.position]]}>
           <GiftedAvatar
@@ -36,10 +33,8 @@ export default class Avatar extends React.Component {
         </View>
       );
     }
-    
     return (
-      <View
-        style={[styles[this.props.position].container, styles[this.props.position][computedStyle], this.props.containerStyle[this.props.position]]}>
+      <View style={[styles[this.props.position].container, this.props.containerStyle[this.props.position]]}>
         {this.renderAvatar()}
       </View>
     );
@@ -49,12 +44,8 @@ export default class Avatar extends React.Component {
 const styles = {
   left: StyleSheet.create({
     container: {
-      marginRight: 8
+      marginRight: 8,
     },
-    onTop: {
-      alignSelf: "flex-start"
-    },
-    onBottom: {},
     image: {
       height: 36,
       width: 36,
@@ -65,10 +56,6 @@ const styles = {
     container: {
       marginLeft: 8,
     },
-    onTop: {
-      alignSelf: "flex-start"
-    },
-    onBottom: {},
     image: {
       height: 36,
       width: 36,
@@ -78,7 +65,6 @@ const styles = {
 };
 
 Avatar.defaultProps = {
-  renderAvatarOnTop: false,
   position: 'left',
   currentMessage: {
     user: null,
@@ -92,11 +78,9 @@ Avatar.defaultProps = {
 };
 
 Avatar.propTypes = {
-  renderAvatarOnTop: React.PropTypes.bool,
   position: React.PropTypes.oneOf(['left', 'right']),
   currentMessage: React.PropTypes.object,
   nextMessage: React.PropTypes.object,
-  onPressAvatar: React.PropTypes.func,
   containerStyle: React.PropTypes.shape({
     left: View.propTypes.style,
     right: View.propTypes.style,
