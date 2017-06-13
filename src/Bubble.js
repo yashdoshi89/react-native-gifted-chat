@@ -11,8 +11,9 @@ import MessageText from './MessageText';
 import MessageImage from './MessageImage';
 import MessageHelpOptions from './MessageHelpOptions';
 import RepairPriceCheck from './RepairPriceCheck';
-import RepairConcierge from './RepairConcierge';
-import TypeOfProblem from './TypeOfProblem';
+import RepairConcierge39 from './RepairConcierge39';
+import RepairConcierge99 from './RepairConcierge99';
+import TypeOfProblem from './RoadsideAssistance';
 import Time from './Time';
 
 import { isSameUser, isSameDay, warnDeprecated } from './utils';
@@ -64,16 +65,24 @@ export default class Bubble extends React.Component {
     return null;
   }
 
-  renderMessageRepairConcierge() {
-    if (this.props.currentMessage.repairConcierge) {
-      const {containerStyle, wrapperStyle, ...repairConciergeProps} = this.props;
-      return <RepairConcierge {...repairConciergeProps}/>;
+  renderMessageRepairConcierge39() {
+    if (this.props.currentMessage.repairConcierge39) {
+      const {containerStyle, wrapperStyle, ...repairConcierge39Props} = this.props;
+      return <RepairConcierge39 {...repairConcierge39Props}/>;
+    }
+    return null;
+  }
+
+  renderMessageRepairConcierge99() {
+    if (this.props.currentMessage.repairConcierge99) {
+      const {containerStyle, wrapperStyle, ...repairConcierge99Props} = this.props;
+      return <RepairConcierge99 {...repairConcierge99Props}/>;
     }
     return null;
   }
 
   renderMessageTypeOfProblem() {
-    if (this.props.currentMessage.typeOfProblem) {
+    if (this.props.currentMessage.roadsideAssistance) {
       const {containerStyle, wrapperStyle, ...typeOfProblemProps} = this.props;
       return <TypeOfProblem {...typeOfProblemProps}/>;
     }
@@ -163,7 +172,8 @@ export default class Bubble extends React.Component {
           >
             <View>
               {this.renderMessageHelp()}
-              {this.renderMessageRepairConcierge()}
+              {this.renderMessageRepairConcierge39()}
+              {this.renderMessageRepairConcierge99()}
               {this.renderMessageTypeOfProblem()}
               {this.renderMessageRepairPriceCheck()}
               {this.renderCustomView()}
