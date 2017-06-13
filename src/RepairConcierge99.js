@@ -34,13 +34,13 @@ export default class RepairConcierge99 extends React.Component {
                </Button>
              </Item>
 
-            <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5, marginBottom:10,}}>
+            <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5, }}>
               <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
               <Image style={{width:20, height:20, marginRight: 15}} source={require('../../../img/roadsideAssistance.png')}  />
               <Text style={{color:'black', fontSize:14,}}>Help with unlimited {"\n"}repairs </Text>
                </Button>
              </Item>
-             {/*
+
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5, marginBottom:10, marginTop:20,height:70,}}>
               <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
@@ -48,7 +48,7 @@ export default class RepairConcierge99 extends React.Component {
               <Text style={{color:'black', fontSize:14,}}>We work with the local{"\n"}mechanic on your behalf to{"\n"}ensure right diagnostic at the{"\n"}right price.</Text>
                </Button>
              </Item>
-             */}
+
 
              <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5, marginBottom:5}}>
                <Button transparent style={{marginLeft: 17, marginBottom:10, backgroundColor:'#40BEC4'}} onPress={ () => console.log('Info', 'Text touched')}>
