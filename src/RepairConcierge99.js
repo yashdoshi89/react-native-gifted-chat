@@ -50,7 +50,7 @@ export default class RepairConcierge99 extends React.Component {
              </Item>
 
 
-             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5, marginBottom:5}}>
+             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5, }}>
                <Button transparent style={{marginLeft: 17, marginBottom:10, backgroundColor:'#40BEC4'}} onPress={ () => console.log('Info', 'Text touched')}>
                <Text style={{  marginTop: -5, color:'black', fontSize:14, }}>Only $99 - Tap here to enroll</Text>
                 </Button>
