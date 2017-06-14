@@ -195,36 +195,54 @@ const styles = {
       alignItems: 'flex-start',
     },
     wrapper: {
-      borderRadius: 15,
+      borderRadius: 10,
       backgroundColor: '#f0f0f0',
       marginRight: 60,
       minHeight: 20,
       justifyContent: 'flex-end',
+      borderColor:'#D5D8E1',
+      borderWidth:0.3,
+      shadowColor: '#AAA',
+      shadowOffset: {
+        width: 0,
+        height: 1,
+      },
+      shadowRadius: 5,
+      shadowOpacity: 0.2
     },
     containerToNext: {
-      borderBottomLeftRadius: 15,
+      borderBottomLeftRadius: 10,
     },
     containerToPrevious: {
-      borderTopLeftRadius: 15,
+      borderTopLeftRadius: 10,
     },
   }),
   right: StyleSheet.create({
     container: {
       flex: 1,
       alignItems: 'flex-end',
+      margin:10,
     },
     wrapper: {
-      borderRadius: 15,
-      backgroundColor: '#0084ff',
+      borderRadius: 10,
+      backgroundColor: '#FFFFFF',
       marginLeft: 60,
-      minHeight: 20,
+      minHeight: 30,
+      padding:5,
       justifyContent: 'flex-end',
+      shadowColor: '#AAA',
+      shadowOffset: {
+        width: 0,
+        height: 1,
+      },
+      shadowRadius: 5,
+      shadowOpacity: 0.2
     },
     containerToNext: {
-      borderBottomRightRadius: 15,
+      borderBottomRightRadius: 10,
     },
     containerToPrevious: {
-      borderTopRightRadius: 15,
+      borderTopRightRadius: 10,
     },
   }),
   bottom: {

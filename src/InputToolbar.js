@@ -65,7 +65,7 @@ export default class InputToolbar extends React.Component {
 const styles = StyleSheet.create({
   container: {
     borderTopWidth: StyleSheet.hairlineWidth,
-    borderTopColor: '#b2b2b2',
+    borderTopColor: '#FFFFFF',
     backgroundColor: '#FFFFFF',
   },
   primary: {
