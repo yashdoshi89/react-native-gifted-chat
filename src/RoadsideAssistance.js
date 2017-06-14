@@ -10,48 +10,48 @@ export default class TypeOfProblem extends React.Component {
       <View style={[styles.container, this.props.containerStyle]}>
         <List>
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
-              <Text style={{color:'black', fontSize:14,margin:13,}}>What type of problem do you have?</Text>
+              <Text style={{color:'#1E2023', fontSize:13,margin:17,}}>What type of problem do you have?</Text>
             </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
               <Button transparent onPress={ () => console.log('Info', 'Text touched')}>
               <Image style={{width:22, height:22, marginRight: 15}} source={require('../../../img/mechanicalProblem.png')}  />
-              <Text style={{color:'black', fontSize:14,}}>Mechanical Problem</Text>
+              <Text style={{color:'#1E2023', fontSize:13,}}>Mechanical Problem</Text>
                </Button>
              </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
               <Button transparent onPress={ () => console.log('Info', 'Text touched')}>
               <Image style={{width:22, height:21, marginRight: 15}} source={require('../../../img/vehicleStuck.png')}  />
-              <Text style={{color:'black', fontSize:14,}}>Vehicle Stuck</Text>
+              <Text style={{color:'#1E2023', fontSize:13,}}>Vehicle Stuck</Text>
                </Button>
              </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
               <Button transparent onPress={ () => console.log('Info', 'Text touched')}>
               <Image style={{width: 16, height:27, marginRight: 15}} source={require('../../../img/batteryIcon.png')}  />
-              <Text style={{color:'black', fontSize:14, marginLeft:5,}}>Battery</Text>
+              <Text style={{color:'#1E2023', fontSize:13, marginLeft:5,}}>Battery</Text>
                </Button>
              </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
               <Button transparent onPress={ () => console.log('Info', 'Text touched')}>
               <Image style={{width:21, height:21, marginRight: 15, marginLeft:2,}} source={require('../../../img/flatTire.png')}  />
-              <Text style={{color:'black', fontSize:14,}}>Flat Tire</Text>
+              <Text style={{color:'#1E2023', fontSize:13,}}>Flat Tire</Text>
                </Button>
              </Item>
 
              <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
                <Button transparent onPress={ () => console.log('Info', 'Text touched')}>
                <Image style={{width:20, height:20, marginRight: 15, marginLeft:2}} source={require('../../../img/locksmithIcon.png')}  />
-               <Text style={{color:'black', fontSize:14,}}>Lockout/Locksmith</Text>
+               <Text style={{color:'#1E2023', fontSize:13,}}>Lockout/Locksmith</Text>
                 </Button>
               </Item>
 
-            <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5, marginBottom:10,}}>
+            <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5, }}>
               <Button transparent onPress={ () => console.log('Info', 'Text touched')}>
               <Image style={{width:21, height:20, marginRight: 15, marginLeft:2}} source={require('../../../img/outOfFuel.png')}  />
-              <Text style={{color:'black', fontSize:14,}}>Out of Fuel</Text>
+              <Text style={{color:'#1E2023', fontSize:13,}}>Out of Fuel</Text>
                </Button>
              </Item>
          </List>
