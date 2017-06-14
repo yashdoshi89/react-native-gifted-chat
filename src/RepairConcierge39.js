@@ -10,47 +10,47 @@ export default class RepairConcierge39 extends React.Component {
       <View style={[styles.container, this.props.containerStyle]}>
         <List>
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
-              <Text style={{color:'black', fontSize:14,margin:10,}}>Your ultimate VIP Repair Concierge  includes the following benefits:</Text>
+              <Text style={{color:'#1E2023', fontSize:13,margin:14,}}>Your ultimate VIP Repair Concierge  includes the following benefits:</Text>
             </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
               <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
               <Image style={{width:23, height:20, marginRight: 15}} source={require('../../../img/warrantyIcon.png')}  />
-              <Text style={{color:'black', fontSize:14,}}>2 year waranty on repair</Text>
+              <Text style={{color:'#1E2023', fontSize:13,}}>2 year waranty on repair</Text>
                </Button>
              </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
               <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
               <Image style={{width:22, height:22, marginRight: 15}} source={require('../../../img/discountsIcon.png')}  />
-              <Text style={{color:'black', fontSize:14,}}>20% discount on parts</Text>
+              <Text style={{color:'#1E2023', fontSize:13,}}>20% discount on parts</Text>
                </Button>
              </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
               <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
               <Image style={{width:20, height:20, marginRight: 15}} source={require('../../../img/uberCredits.png')}  />
-              <Text style={{color:'black', fontSize:14,}}>10$ Uber credits</Text>
+              <Text style={{color:'#1E2023', fontSize:13,}}>10$ Uber credits</Text>
                </Button>
              </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
               <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
               <Image style={{width:20, height:20, marginRight: 15}} source={require('../../../img/roadsideAssistance.png')}  />
-              <Text style={{color:'black', fontSize:14,}}>We take over the repair {"\n"}process for you. </Text>
+              <Text style={{color:'#1E2023', fontSize:13,}}>We take over the repair {"\n"}process for you. </Text>
                </Button>
              </Item>
 
-            <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5, marginBottom:10, marginTop:20,height:70,}}>
+            <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5, marginTop:20,height:70,}}>
               <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
               <Image style={{width:23, height:21, marginRight: 15}} source={require('../../../img/localMechanic.png')}  />
-              <Text style={{color:'black', fontSize:14,}}>We work with the local{"\n"}mechanic on your behalf to{"\n"}ensure right diagnostic at the{"\n"}right price.</Text>
+              <Text style={{color:'#1E2023', fontSize:13, marginLeft:-2,}}>We work with the local{"\n"}mechanic on your behalf to{"\n"}ensure right diagnostic at the{"\n"}right price.</Text>
                </Button>
              </Item>
 
-             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5, marginBottom:5}}>
-               <Button transparent style={{marginLeft: 17, marginBottom:10, backgroundColor:'#40BEC4'}} onPress={ () => console.log('Info', 'Text touched')}>
-               <Text style={{  marginTop: -5, color:'black', fontSize:14, }}>Only $39 - Tap here to enroll</Text>
+             <Item>
+               <Button transparent style={{marginLeft: -1, backgroundColor:'#40BEC4', borderTopLeftRadius:0, borderTopRightRadius:0, flex:1,}} onPress={ () => console.log('Info', 'Text touched')}>
+               <Text style={{  paddingLeft:20, marginTop: -5, color:'#FFFFFF', fontSize:13, }}>Only $39 - Tap here to enroll</Text>
                 </Button>
               </Item>
          </List>
