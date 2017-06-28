@@ -35,26 +35,28 @@ export default class PriceCheckout extends React.Component {
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
                 <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
                   <Image style={{width:20, height:20, padding: 10}} source={require('../../../img/timeIcon.png')}  />
-                  <Text style={{color:'#1E2023', fontSize:13, padding:10 }}>20 Hrs</Text>
+                  <Text style={{color:'#1E2023', fontSize:13, padding:10 }}>{this.props.currentMessage.HourTotal} Hrs</Text>
                 </Button>
             </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
                <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
                  <Image style={{width:20, height:20, padding: 10}} source={require('../../../img/moneyIcon.png')}  />
-                 <Text style={{color:'#1E2023', fontSize:13,  padding:10,}}>60 $</Text>
+                 <Text style={{color:'#1E2023', fontSize:13,  padding:10,}}>$ {this.props.currentMessage.HourRateDealer}</Text>
                </Button>
             </Item>
 
-            <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
-              <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
-                <Image style={{width:20, height:20,  padding:10,}} source={require('../../../img/partsIcon.png')}  />
-                <Text ellipsizeMode='tail' numberOfLines={1} style={{color:'#1E2023', fontSize:13, padding:10,}}>AC Cooling System</Text>
-              </Button>
-            </Item>
+            // <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
+            //   <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
+            //     <Image style={{width:20, height:20,  padding:10,}} source={require('../../../img/partsIcon.png')}  />
+            //     <Text ellipsizeMode='tail' numberOfLines={1} style={{color:'#1E2023', fontSize:13, padding:10,}}>AC Cooling System</Text>
+            //   </Button>
+            // </Item>
 
             <Item style={{ borderBottomWidth: 0,}}>
-               <Text ellipsizeMode='tail' numberOfLines={1} style={{ padding:10,  color:'#8DC63F', fontSize:25, textAlign: 'center'}}>$ 275 </Text>
+               <Text ellipsizeMode='tail' numberOfLines={1} style={{ padding:10,  color:'#8DC63F', fontSize:25, textAlign: 'center'}}>
+                $ {this.props.currentMessage.HourRateDealer * this.props.currentMessage.HourTotal}
+               </Text>
             </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0,}}>
@@ -85,26 +87,28 @@ export default class PriceCheckout extends React.Component {
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
                 <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
                   <Image style={{width:20, height:20, padding: 10}} source={require('../../../img/timeIcon.png')}  />
-                  <Text style={{color:'#1E2023', fontSize:13, padding:10 }}>20 Hrs</Text>
+                  <Text style={{color:'#1E2023', fontSize:13, padding:10 }}>{this.props.currentMessage.HourTotal} Hrs</Text>
                 </Button>
             </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
                <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
                  <Image style={{width:20, height:20, padding: 10}} source={require('../../../img/moneyIcon.png')}  />
-                 <Text style={{color:'#1E2023', fontSize:13,  padding:10,}}>70 $</Text>
+                 <Text style={{color:'#1E2023', fontSize:13,  padding:10,}}>$ {this.props.currentMessage.HourRateShop}</Text>
                </Button>
             </Item>
 
-            <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
-              <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
-                <Image style={{width:20, height:20,  padding:10,}} source={require('../../../img/partsIcon.png')}  />
-                <Text ellipsizeMode='tail' numberOfLines={1} style={{color:'#1E2023', fontSize:13, padding:10,}}>AC Cooling System</Text>
-              </Button>
-            </Item>
+            // <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
+            //   <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
+            //     <Image style={{width:20, height:20,  padding:10,}} source={require('../../../img/partsIcon.png')}  />
+            //     <Text ellipsizeMode='tail' numberOfLines={1} style={{color:'#1E2023', fontSize:13, padding:10,}}>AC Cooling System</Text>
+            //   </Button>
+            // </Item>
 
             <Item style={{ borderBottomWidth: 0,}}>
-               <Text ellipsizeMode='tail' numberOfLines={1} style={{ padding:10,  color:'#8DC63F', fontSize:25, textAlign: 'center'}}>$ 175 </Text>
+               <Text ellipsizeMode='tail' numberOfLines={1} style={{ padding:10,  color:'#8DC63F', fontSize:25, textAlign: 'center'}}>
+                 $ {this.props.currentMessage.HourRateShop * this.props.currentMessage.HourTotal}
+               </Text>
             </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0,}}>
@@ -138,36 +142,6 @@ const styles = StyleSheet.create({
   listTitle: {
     color:'black',
     fontSize: 15,
-  },
-  boxleft: {
-    flex: 1,
-    flexDirection: 'row',
-    height: 92,
-    borderRadius: 10,
-    padding: 10,
-    flexWrap: 'wrap',
-    shadowColor: '#AAA',
-    marginTop:10,
-    shadowRadius: 5,
-    shadowOpacity: 0.3,
-    backgroundColor: '#FFF',
-    position: 'relative',
-    marginLeft: 15,
-    marginRight:7,
-  },
-  boxright: {
-    flex: 1,
-    height: 92,
-    alignSelf: 'flex-end',
-    borderRadius: 10,
-    padding: 10,
-    marginTop:-322,
-    shadowColor: '#AAA',
-    shadowRadius: 5,
-    shadowOpacity: 0.3,
-    backgroundColor: '#FFF',
-    marginLeft: 15,
-    marginRight:13,
   },
 });
 
