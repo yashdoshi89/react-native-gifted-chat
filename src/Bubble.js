@@ -83,7 +83,7 @@ export default class Bubble extends React.Component {
   }
 
   renderMessagePriceCheckout() {
-    if (this.props.currentMessage.priceCheckout) {
+    if (this.props.currentMessage.PriceCheckout) {
       const {containerStyle, wrapperStyle, ...priceCheckoutProps} = this.props;
       return <PriceCheckout {...priceCheckoutProps}/>;
     }
@@ -174,7 +174,7 @@ export default class Bubble extends React.Component {
     if (this.props.currentMessage.PriceCheckout) {
       return (
         <View style={{backgroundColor: 'rgba(0,0,0,0)',}}>
-          {this.renderMessageRepairPriceCheck()}
+          {this.renderMessagePriceCheckout()}
         </View>
       );
     } else {
@@ -190,7 +190,6 @@ export default class Bubble extends React.Component {
         {this.renderMessageHelp()}
         {this.renderMessageRepairConcierge39()}
         {this.renderMessageRepairConcierge99()}
-        {this.renderMessagePriceCheckout()}
         {this.renderMessageTypeOfProblem()}
         {this.renderCustomView()}
         {this.renderMessageImage()}

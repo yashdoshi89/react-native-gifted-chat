@@ -8,7 +8,6 @@ const { width, height } = Dimensions.get('window');
 export default class PriceCheckout extends React.Component {
   render() {
     const { width, height } = Dimensions.get('window');
-
     return (
       <View transparent style={[styles.container], {
         flexDirection: 'row',
@@ -45,13 +44,6 @@ export default class PriceCheckout extends React.Component {
                  <Text style={{color:'#1E2023', fontSize:13,  padding:10,}}>$ {this.props.currentMessage.HourRateDealer}</Text>
                </Button>
             </Item>
-
-            // <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
-            //   <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
-            //     <Image style={{width:20, height:20,  padding:10,}} source={require('../../../img/partsIcon.png')}  />
-            //     <Text ellipsizeMode='tail' numberOfLines={1} style={{color:'#1E2023', fontSize:13, padding:10,}}>AC Cooling System</Text>
-            //   </Button>
-            // </Item>
 
             <Item style={{ borderBottomWidth: 0,}}>
                <Text ellipsizeMode='tail' numberOfLines={1} style={{ padding:10,  color:'#8DC63F', fontSize:25, textAlign: 'center'}}>
@@ -97,13 +89,6 @@ export default class PriceCheckout extends React.Component {
                  <Text style={{color:'#1E2023', fontSize:13,  padding:10,}}>$ {this.props.currentMessage.HourRateShop}</Text>
                </Button>
             </Item>
-
-            // <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
-            //   <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
-            //     <Image style={{width:20, height:20,  padding:10,}} source={require('../../../img/partsIcon.png')}  />
-            //     <Text ellipsizeMode='tail' numberOfLines={1} style={{color:'#1E2023', fontSize:13, padding:10,}}>AC Cooling System</Text>
-            //   </Button>
-            // </Item>
 
             <Item style={{ borderBottomWidth: 0,}}>
                <Text ellipsizeMode='tail' numberOfLines={1} style={{ padding:10,  color:'#8DC63F', fontSize:25, textAlign: 'center'}}>
