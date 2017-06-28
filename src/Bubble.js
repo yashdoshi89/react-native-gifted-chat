@@ -13,6 +13,7 @@ import MessageHelpOptions from './MessageHelpOptions';
 import RepairPriceCheck from './RepairPriceCheck';
 import RepairConcierge39 from './RepairConcierge39';
 import RepairConcierge99 from './RepairConcierge99';
+import PriceCheckout from './PriceCheckout';
 import TypeOfProblem from './RoadsideAssistance';
 import Time from './Time';
 
@@ -77,6 +78,14 @@ export default class Bubble extends React.Component {
     if (this.props.currentMessage.repairConcierge99) {
       const {containerStyle, wrapperStyle, ...repairConcierge99Props} = this.props;
       return <RepairConcierge99 {...repairConcierge99Props}/>;
+    }
+    return null;
+  }
+
+  renderMessagePriceCheckout() {
+    if (this.props.currentMessage.priceCheckout) {
+      const {containerStyle, wrapperStyle, ...priceCheckoutProps} = this.props;
+      return <PriceCheckout {...priceCheckoutProps}/>;
     }
     return null;
   }
@@ -174,6 +183,7 @@ export default class Bubble extends React.Component {
               {this.renderMessageHelp()}
               {this.renderMessageRepairConcierge39()}
               {this.renderMessageRepairConcierge99()}
+              {this.renderMessagePriceCheckout()}
               {this.renderMessageTypeOfProblem()}
               {this.renderMessageRepairPriceCheck()}
               {this.renderCustomView()}
