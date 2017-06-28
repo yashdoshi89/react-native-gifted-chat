@@ -1,11 +1,11 @@
 {
-  "name": "react-native-gifted-chat",
-  "version": "0.1.4",
+  "name": "askzuma-chat",
+  "version": "0.0.3",
   "description": "The most complete chat UI for React Native",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FaridSafi/react-native-gifted-chat.git"
+    "url": "git+https://github.com/yashdoshi89/react-native-gifted-chat.git"
   },
   "keywords": [
     "android",
@@ -19,10 +19,6 @@
   ],
   "author": "Farid Safi",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/FaridSafi/react-native-gifted-chat/issues"
-  },
-  "homepage": "https://github.com/FaridSafi/react-native-gifted-chat#readme",
   "scripts": {
     "lint": "eslint . --ext .js,.jsx"
   },
@@ -41,9 +37,16 @@
     "moment": "2.17.1",
     "react-native-communications": "2.2.1",
     "react-native-invertible-scroll-view": "1.0.0",
-    "react-native-lightbox": "oblador/react-native-lightbox#c84a8543d4511fe6a44c3d7820747c9c1bddd875",
+    "react-native-lightbox": "github:oblador/react-native-lightbox#c84a8543d4511fe6a44c3d7820747c9c1bddd875",
     "react-native-parsed-text": "0.0.16",
     "shallowequal": "0.2.2",
     "uuid": "3.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/yashdoshi89/react-native-gifted-chat/issues"
+  },
+  "homepage": "https://github.com/yashdoshi89/react-native-gifted-chat#readme",
+  "directories": {
+    "example": "example"
   }
 }

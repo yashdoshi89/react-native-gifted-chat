@@ -171,30 +171,37 @@ export default class Bubble extends React.Component {
   }
 
   render() {
-    return (
-      <View style={[styles[this.props.position].container, this.props.containerStyle[this.props.position]]}>
-        <View style={[styles[this.props.position].wrapper, this.props.wrapperStyle[this.props.position], this.handleBubbleToNext(), this.handleBubbleToPrevious()]}>
-          <TouchableWithoutFeedback
-            onLongPress={this.onLongPress}
-            accessibilityTraits="text"
-            {...this.props.touchableProps}
-          >
-            <View>
-              {this.renderMessageHelp()}
-              {this.renderMessageRepairConcierge39()}
-              {this.renderMessageRepairConcierge99()}
-              {this.renderMessagePriceCheckout()}
-              {this.renderMessageTypeOfProblem()}
-              {this.renderMessageRepairPriceCheck()}
-              {this.renderCustomView()}
-              {this.renderMessageImage()}
-              {this.renderMessageText()}
-
-            </View>
-          </TouchableWithoutFeedback>
+    if (this.props.currentMessage.PriceCheckout) {
+      return (
+        <View style={{backgroundColor: 'rgba(0,0,0,0)',}}>
+          {this.renderMessageRepairPriceCheck()}
         </View>
-      </View>
-    );
+      );
+    } else {
+      return (
+        <View style={[styles[this.props.position].container, this.props.containerStyle[this.props.position]]}>
+        <View style={[styles[this.props.position].wrapper, this.props.wrapperStyle[this.props.position], this.handleBubbleToNext(), this.handleBubbleToPrevious()]}>
+        <TouchableWithoutFeedback
+        onLongPress={this.onLongPress}
+        accessibilityTraits="text"
+        {...this.props.touchableProps}
+        >
+        <View>
+        {this.renderMessageHelp()}
+        {this.renderMessageRepairConcierge39()}
+        {this.renderMessageRepairConcierge99()}
+        {this.renderMessagePriceCheckout()}
+        {this.renderMessageTypeOfProblem()}
+        {this.renderCustomView()}
+        {this.renderMessageImage()}
+        {this.renderMessageText()}
+
+        </View>
+        </TouchableWithoutFeedback>
+        </View>
+        </View>
+      );
+    }
   }
 }
 
@@ -207,7 +214,7 @@ const styles = {
     wrapper: {
       borderRadius: 10,
       backgroundColor: '#f0f0f0',
-      marginRight: 60,
+      marginRight: 10,
       minHeight: 20,
       justifyContent: 'flex-end',
       borderColor:'#D5D8E1',
@@ -236,7 +243,7 @@ const styles = {
     wrapper: {
       borderRadius: 10,
       backgroundColor: '#FFFFFF',
-      marginLeft: 60,
+      marginLeft: 10,
       minHeight: 30,
       padding:5,
       justifyContent: 'flex-end',
