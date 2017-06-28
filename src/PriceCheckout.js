@@ -7,7 +7,7 @@ export default class PriceCheckout extends React.Component {
     const { width, height } = Dimensions.get('window');
 
     return (
-      {/* <List style={{marginLeft: -20, width:171,}}>
+       <List style={{marginLeft: -20, width:171,}}>
 
         <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
           <Button disabled transparent  onPress={ () => console.log('Info', 'Text touched')}>
@@ -46,7 +46,7 @@ export default class PriceCheckout extends React.Component {
               </Button>
             </Item>
        </List>
-       */}
+       
     );
   }
 }
