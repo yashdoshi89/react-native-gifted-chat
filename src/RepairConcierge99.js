@@ -37,7 +37,7 @@ export default class RepairConcierge99 extends React.Component {
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5, }}>
               <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
               <Image style={{width:20, height:20, marginRight: 15}} source={require('../../../img/roadsideAssistance.png')}  />
-              <Text style={{color:'#1E2023', fontSize:13,}}>Help with unlimited {"\n"}repairs </Text>
+              <Text style={{color:'#1E2023', fontSize:13,}}>Help with unlimited repairs </Text>
                </Button>
              </Item>
 
@@ -45,14 +45,14 @@ export default class RepairConcierge99 extends React.Component {
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5, marginTop:20,height:70,}}>
               <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
               <Image style={{width:23, height:20, marginRight: 15}} source={require('../../../img/localMechanic.png')}  />
-              <Text style={{color:'#1E2023', fontSize:13, marginLeft:-2,}}>We work with the local{"\n"}mechanic on your behalf to{"\n"}ensure right diagnostic at the{"\n"}right price.</Text>
+              <Text style={{color:'#1E2023', fontSize:13, marginLeft:-2,}}>We work with the local mechanic{"\n"}on your behalf to ensure right{"\n"}diagnostic at the right price.</Text>
                </Button>
              </Item>
 
 
              <Item>
                <Button transparent style={{marginLeft: -1, backgroundColor:'#40BEC4', borderTopLeftRadius:0, borderTopRightRadius:0, flex:1,}} onPress={ () => console.log('Info', 'Text touched')}>
-               <Text style={{  paddingLeft:20, marginTop: -5, color:'#FFFFFF', fontSize:13, }}>Only $99 - Tap here to enroll</Text>
+               <Text style={{  textAlign: 'center', flex:1,  marginTop: -5, color:'#FFFFFF', fontSize:14, }}>Only $99 - Tap here to enroll</Text>
                 </Button>
               </Item>
          </List>
