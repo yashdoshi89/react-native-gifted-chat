@@ -50,7 +50,7 @@ export default class RepairConcierge39 extends React.Component {
 
              <Item>
                <Button transparent style={{marginLeft: -1, backgroundColor:'#40BEC4', borderTopLeftRadius:0, borderTopRightRadius:0, flex:1,}} onPress={ () => console.log('Info', 'Text touched')}>
-               <Text style={{  paddingLeft:20, marginTop: -5, color:'#FFFFFF', fontSize:13, }}>Only $39 - Tap here to enroll</Text>
+               <Text style={{  textAlign: 'center', flex:1,  marginTop: -5, color:'#FFFFFF', fontSize:13, }}>Only $39 - Tap here to enroll</Text>
                 </Button>
               </Item>
          </List>
