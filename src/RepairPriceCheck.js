@@ -2,6 +2,7 @@ import React , { Component } from 'react';
 import { Button, Container, Content, Card, CardItem, Text, Icon, Right, Left, List, ListItem, Item, InputGroup } from 'native-base';
 import Lightbox from 'react-native-lightbox';
 import {Alert, Image,StyleSheet,View,Dimensions, TouchableOpacity, TouchableHighlight} from 'react-native';
+import { Actions } from 'react-native-router-flux';
 export default class RepairPriceCheck extends React.Component {
   render() {
     const { width, height } = Dimensions.get('window');
@@ -14,7 +15,7 @@ export default class RepairPriceCheck extends React.Component {
             </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
-              <Button transparent onPress={ () => console.log('Info', 'Text touched')}>
+              <Button transparent onPress={ () => Actions.carYear();}>
               <Image style={{width:20, height:15, marginRight: 15}} source={require('../../../img/whichCar.png')}  />
               <Text style={{color:'#1E2023', fontSize:13,}}>Tell us about your car</Text>
                <Right style={{marginLeft:40,}}><Image style={{width:35, height:35,}} source={require('../../../img/forwardClickButton.png')}  /></Right>
@@ -22,7 +23,7 @@ export default class RepairPriceCheck extends React.Component {
              </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
-              <Button transparent onPress={ () => console.log('Info', 'Text touched')}>
+              <Button transparent onPress={ () => Actions.carServiceList();}>
               <Image style={{width:20, height:20, marginRight: 15}} source={require('../../../img/searchIcon.png')}  />
               <Text style={{color:'#1E2023', fontSize:13,}}>What type of service {"\n"}are you looking for?</Text>
               <Right style={{marginLeft:41,}}><Image style={{width:35, height:35,}} source={require('../../../img/forwardClickButton.png')}  /></Right>

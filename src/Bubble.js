@@ -192,6 +192,7 @@ export default class Bubble extends React.Component {
         {this.renderMessageRepairConcierge99()}
         {this.renderMessageTypeOfProblem()}
         {this.renderCustomView()}
+        {this.renderMessageRepairPriceCheck()}
         {this.renderMessageImage()}
         {this.renderMessageText()}
 
