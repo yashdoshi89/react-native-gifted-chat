@@ -16,13 +16,13 @@ export default class PriceCheckout extends React.Component {
         marginLeft:-1,
       }}>
         <View style={{
-          width: width / 2.5,
+          width: width / 2.58,
           borderRadius: 10,
           paddingLeft: 0,
           paddingRight: 0,
           paddingTop:10,
           paddingBottom:10,
-          marginLeft:-5,
+          marginLeft:0,
           shadowColor: '#AAA',
           shadowRadius: 5,
           shadowOpacity: 0.3,
@@ -66,13 +66,14 @@ export default class PriceCheckout extends React.Component {
         </View>
 
         <View style={{
-          width: width / 2.5,
+          width: width / 2.58,
           borderRadius: 10,
           paddingLeft: 0,
           paddingRight: 0,
           paddingTop:10,
           paddingBottom:10,
-          marginLeft:-5,
+          marginLeft:12,
+          marginRight:6,
           shadowColor: '#AAA',
           backgroundColor: '#FFF',
           shadowRadius: 5,
