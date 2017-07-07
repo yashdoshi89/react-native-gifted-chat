@@ -50,7 +50,7 @@ export default class TypeOfProblem extends React.Component {
               </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0, }}>
-              <Button transparent onPress={ () => c() => this.props.onSelectOption('Out of Fuel')}>
+              <Button transparent onPress={ () => this.props.onSelectOption('Out of Fuel')}>
                 <Image style={{width:21, height:20, marginRight: 15, marginLeft:2}} source={require('../../../img/outOfFuel.png')}  />
                 <Text style={{color:'#1E2023', fontSize:13,}}>Out of Fuel</Text>
               </Button>
