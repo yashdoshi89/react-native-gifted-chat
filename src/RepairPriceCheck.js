@@ -5,11 +5,12 @@ import {Alert, Image,StyleSheet,View,Dimensions, TouchableOpacity, TouchableHigh
 import { Actions } from 'react-native-router-flux';
 export default class RepairPriceCheck extends React.Component {
   render() {
-    const { width, height } = Dimensions.get('window');
+    // const { width, height } = Dimensions.get('window');
+    var width = Dimensions.get('window').width;
 
     return (
       <View style={[styles.container, this.props.containerStyle]}>
-        <List>
+        <List style={{ width: width * .7 }}>
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
               <Text style={{color:'#1E2023', fontSize:13,margin:15,}}>Ok great. Happy to help! Please provide me the following details:</Text>
             </Item>
@@ -30,7 +31,7 @@ export default class RepairPriceCheck extends React.Component {
                </Button>
              </Item>
 
-            <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5, }}>
+            <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0, }}>
               <Button transparent onPress={ () => console.log('Info', 'Text touched')}>
               <Image style={{width:18, height:23, marginRight: 15}} source={require('../../../img/locationImage.png')}  />
               <Text style={{color:'#1E2023', fontSize:13, marginLeft:4,}}>Where is your vehicle {"\n"}located?</Text>

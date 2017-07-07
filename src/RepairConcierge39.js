@@ -4,11 +4,12 @@ import Lightbox from 'react-native-lightbox';
 import {Alert, Image,StyleSheet,View,Dimensions, TouchableOpacity, TouchableHighlight} from 'react-native';
 export default class RepairConcierge39 extends React.Component {
   render() {
-    const { width, height } = Dimensions.get('window');
+    // const { width, height } = Dimensions.get('window');
+    var width = Dimensions.get('window').width;
 
     return (
       <View style={[styles.container, this.props.containerStyle]}>
-        <List>
+        <List style={{ width: width * .7 }}>
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
               <Text style={{color:'#1E2023', fontSize:13,margin:14,}}>Your ultimate VIP Repair Concierge  includes the following benefits:</Text>
             </Item>
@@ -49,7 +50,7 @@ export default class RepairConcierge39 extends React.Component {
              </Item>
 
              <Item>
-               <Button transparent style={{marginLeft: -1, backgroundColor:'#40BEC4', borderTopLeftRadius:0, borderTopRightRadius:0, flex:1,}} onPress={ () => console.log('Info', 'Text touched')}>
+               <Button transparent style={{marginLeft: -1, backgroundColor:'#40BEC4', borderTopLeftRadius:0, borderTopRightRadius:0, flex:1, borderBottomWidth:0,}} onPress={ () => console.log('Info', 'Text touched')}>
                <Text style={{  textAlign: 'center', flex:1,  marginTop: -5, color:'#FFFFFF', fontSize:14, }}>Only $39 - Tap here to enroll</Text>
                 </Button>
               </Item>

@@ -4,11 +4,12 @@ import Lightbox from 'react-native-lightbox';
 import {Alert, Image,StyleSheet,View,Dimensions, TouchableOpacity, TouchableHighlight} from 'react-native';
 export default class TypeOfProblem extends React.Component {
   render() {
-    const { width, height } = Dimensions.get('window');
+    // const { width, height } = Dimensions.get('window');
+    var width = Dimensions.get('window').width;
 
     return (
       <View style={[styles.container, this.props.containerStyle]}>
-        <List>
+        <List style={{ width: width * .7 }}>
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
               <Text style={{color:'#1E2023', fontSize:13,margin:17,}}>What type of problem do you have?</Text>
             </Item>
@@ -48,7 +49,7 @@ export default class TypeOfProblem extends React.Component {
                 </Button>
               </Item>
 
-            <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5, }}>
+            <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0, }}>
               <Button transparent onPress={ () => console.log('Info', 'Text touched')}>
               <Image style={{width:21, height:20, marginRight: 15, marginLeft:2}} source={require('../../../img/outOfFuel.png')}  />
               <Text style={{color:'#1E2023', fontSize:13,}}>Out of Fuel</Text>

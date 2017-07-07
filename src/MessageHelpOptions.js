@@ -4,11 +4,12 @@ import Lightbox from 'react-native-lightbox';
 import {Alert, Image,StyleSheet,View,Dimensions, TouchableOpacity, TouchableHighlight} from 'react-native';
 export default class MessageHelpOptions extends React.Component {
   render() {
-    const { width, height } = Dimensions.get('window');
+    // const { width, height } = Dimensions.get('window');
+    var width = Dimensions.get('window').width;
 
     return (
       <View style={[styles.container, this.props.containerStyle]}>
-        <List>
+        <List style={{ width: width * .7 }}>
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
               <Text style={{color:'#1E2023', fontSize:13,margin:15,}}>I can help you with any of the following requests:</Text>
             </Item>
@@ -61,6 +62,8 @@ const styles = StyleSheet.create({
     height: 100,
     borderRadius: 13,
     margin: 3,
+    marginRight:-3,
+    marginLeft:0,
     resizeMode: 'cover',
   },
   imageActive: {

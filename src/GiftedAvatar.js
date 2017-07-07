@@ -131,6 +131,7 @@ const defaultStyles = {
     width: 40,
     height: 40,
     borderRadius: 20,
+    marginLeft:3,
   },
   textStyle: {
     color: '#fff',

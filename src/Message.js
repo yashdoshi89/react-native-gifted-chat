@@ -72,6 +72,7 @@ const styles = {
       justifyContent: 'flex-start',
       marginLeft: 8,
       marginRight: 0,
+      marginTop:5,
     },
   }),
   right: StyleSheet.create({
