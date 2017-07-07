@@ -15,45 +15,45 @@ export default class TypeOfProblem extends React.Component {
             </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
-              <Button transparent onPress={ () => console.log('Info', 'Text touched')}>
+              <Button transparent onPress={ () => this.props.onSelectOption('Mechanical Problem')}>
               <Image style={{width:22, height:22, marginRight: 15}} source={require('../../../img/mechanicalProblem.png')}  />
               <Text style={{color:'#1E2023', fontSize:13,}}>Mechanical Problem</Text>
                </Button>
              </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
-              <Button transparent onPress={ () => console.log('Info', 'Text touched')}>
+              <Button transparent onPress={ () => this.props.onSelectOption('Vehicle Stuck')}>
               <Image style={{width:22, height:21, marginRight: 15}} source={require('../../../img/vehicleStuck.png')}  />
               <Text style={{color:'#1E2023', fontSize:13,}}>Vehicle Stuck</Text>
                </Button>
              </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
-              <Button transparent onPress={ () => console.log('Info', 'Text touched')}>
+              <Button transparent onPress={ () => this.props.onSelectOption('Battery')}>
               <Image style={{width: 16, height:27, marginRight: 15}} source={require('../../../img/batteryIcon.png')}  />
               <Text style={{color:'#1E2023', fontSize:13, marginLeft:5,}}>Battery</Text>
                </Button>
              </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
-              <Button transparent onPress={ () => console.log('Info', 'Text touched')}>
+              <Button transparent onPress={ () => this.props.onSelectOption('Flat Tire')}>
               <Image style={{width:21, height:21, marginRight: 15, marginLeft:2,}} source={require('../../../img/flatTire.png')}  />
               <Text style={{color:'#1E2023', fontSize:13,}}>Flat Tire</Text>
                </Button>
              </Item>
 
              <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
-               <Button transparent onPress={ () => console.log('Info', 'Text touched')}>
+               <Button transparent onPress={ () => this.props.onSelectOption('Lockout/Locksmith')}>
                <Image style={{width:20, height:20, marginRight: 15, marginLeft:2}} source={require('../../../img/locksmithIcon.png')}  />
                <Text style={{color:'#1E2023', fontSize:13,}}>Lockout/Locksmith</Text>
                 </Button>
               </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0, }}>
-              <Button transparent onPress={ () => console.log('Info', 'Text touched')}>
-              <Image style={{width:21, height:20, marginRight: 15, marginLeft:2}} source={require('../../../img/outOfFuel.png')}  />
-              <Text style={{color:'#1E2023', fontSize:13,}}>Out of Fuel</Text>
-               </Button>
+              <Button transparent onPress={ () => c() => this.props.onSelectOption('Out of Fuel')}>
+                <Image style={{width:21, height:20, marginRight: 15, marginLeft:2}} source={require('../../../img/outOfFuel.png')}  />
+                <Text style={{color:'#1E2023', fontSize:13,}}>Out of Fuel</Text>
+              </Button>
              </Item>
          </List>
        </View>
@@ -81,6 +81,8 @@ const styles = StyleSheet.create({
 });
 
 TypeOfProblem.defaultProps = {
+  onSelectOption: () => {
+  },
   currentMessage: {
     image: null,
   },

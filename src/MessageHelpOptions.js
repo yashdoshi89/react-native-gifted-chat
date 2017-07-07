@@ -15,39 +15,39 @@ export default class MessageHelpOptions extends React.Component {
             </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
-              <Button transparent onPress={ () => console.log('Info', 'Text touched')}>
+              <Button transparent onPress={ () => this.props.onSelectOption('Repair Price Check')}>
               <Image style={{width:17, height:25, marginRight: 15}} source={require('../../../img/repairPriceCheck.png')}  />
               <Text style={{color:'#1E2023', fontSize:13,}}>Repair Price Check</Text>
                </Button>
              </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
-              <Button transparent onPress={ () => console.log('Info', 'Text touched')}>
+              <Button transparent onPress={ () => this.props.onSelectOption('Repair Guidance')}>
               <Image style={{width:22, height:22, marginRight: 15}} source={require('../../../img/repairGuidance.png')}  />
               <Text style={{color:'#1E2023', fontSize:13,}}>Repair Guidance</Text>
                </Button>
              </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
-              <Button transparent onPress={ () => console.log('Info', 'Text touched')}>
+              <Button transparent onPress={ () => this.props.onSelectOption('Repair Concierge')}>
               <Image style={{width:22, height:22, marginRight: 15}} source={require('../../../img/repairConceirge.png')}  />
               <Text style={{color:'#1E2023', fontSize:13,}}>Repair Concierge</Text>
                </Button>
              </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
-              <Button transparent onPress={ () => console.log('Info', 'Text touched')}>
+              <Button transparent onPress={ () => this.props.onSelectOption('Roadside Assistance')}>
               <Image style={{width:20, height:20, marginRight: 15}} source={require('../../../img/roadsideAssistance.png')}  />
               <Text style={{color:'#1E2023', fontSize:13,}}>Roadside Assistance</Text>
                </Button>
              </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0, }}>
-              <Button transparent onPress={ () => console.log('Info', 'Text touched')}>
+              <Button transparent onPress={ () => this.props.onSelectOption('Other Questions')}>
               <Image style={{width:20, height:20, marginRight: 15}} source={require('../../../img/otherQuestions.png')}  />
               <Text style={{color:'#1E2023', fontSize:13,}}>Other Questions</Text>
-               </Button>
-             </Item>
+              </Button>
+            </Item>
          </List>
        </View>
     );
@@ -76,6 +76,8 @@ const styles = StyleSheet.create({
 });
 
 MessageHelpOptions.defaultProps = {
+  onSelectOption: () => {
+  },
   currentMessage: {
     image: null,
   },

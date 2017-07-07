@@ -458,6 +458,8 @@ GiftedChat.defaultProps = {
   messages: [],
   onSend: () => {
   },
+  onSelectOption: () => {
+  },
   loadEarlier: false,
   onLoadEarlier: () => {
   },
