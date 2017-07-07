@@ -42,7 +42,7 @@ export default class MessageHelpOptions extends React.Component {
                </Button>
              </Item>
 
-            <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5, }}>
+            <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0, }}>
               <Button transparent onPress={ () => console.log('Info', 'Text touched')}>
               <Image style={{width:20, height:20, marginRight: 15}} source={require('../../../img/otherQuestions.png')}  />
               <Text style={{color:'#1E2023', fontSize:13,}}>Other Questions</Text>
