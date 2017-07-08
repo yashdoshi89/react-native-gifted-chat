@@ -7,7 +7,6 @@ export default class RepairPriceCheck extends React.Component {
   render() {
     // const { width, height } = Dimensions.get('window');
     var width = Dimensions.get('window').width;
-
     return (
       <View style={[styles.container, this.props.containerStyle]}>
         <List style={{ width: width * .7 }}>
@@ -18,7 +17,7 @@ export default class RepairPriceCheck extends React.Component {
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
               <Button transparent onPress={ () => Actions.carYear()}>
               <Image style={{width:20, height:15, marginRight: 15}} source={require('../../../img/whichCar.png')}  />
-              <Text style={{color:'#1E2023', fontSize:13,}}>Tell us about your car</Text>
+              <Text style={{color:'#1E2023', fontSize:13,}}>{ this.props.currentMessage.selectedCar ? this.props.currentMessage.selectedCar : "Tell us about your car" }</Text>
                <Right style={{marginLeft:40,}}><Image style={{width:35, height:35,}} source={require('../../../img/forwardClickButton.png')}  /></Right>
                </Button>
              </Item>
@@ -26,7 +25,7 @@ export default class RepairPriceCheck extends React.Component {
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
               <Button transparent onPress={ () => Actions.carServiceList()}>
               <Image style={{width:20, height:20, marginRight: 15}} source={require('../../../img/searchIcon.png')}  />
-              <Text style={{color:'#1E2023', fontSize:13,}}>What type of service {"\n"}are you looking for?</Text>
+              <Text style={{color:'#1E2023', fontSize:13,}}>{ this.props.currentMessage.selectedJob ? this.props.currentMessage.selectedJob : "What type of service are you looking for?" } </Text>
               <Right style={{marginLeft:41,}}><Image style={{width:35, height:35,}} source={require('../../../img/forwardClickButton.png')}  /></Right>
                </Button>
              </Item>
