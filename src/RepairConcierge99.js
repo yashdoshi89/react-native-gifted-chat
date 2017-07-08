@@ -2,6 +2,8 @@ import React , { Component } from 'react';
 import { Button, Container, Content, Card, CardItem, Text, Icon, Right, Left, List, ListItem, Item, InputGroup } from 'native-base';
 import Lightbox from 'react-native-lightbox';
 import {Alert, Image,StyleSheet,View, Dimensions, TouchableOpacity, TouchableHighlight} from 'react-native';
+import { Actions } from 'react-native-router-flux';
+
 export default class RepairConcierge99 extends React.Component {
   render() {
     // const { width, height } = Dimensions.get('window');
@@ -52,7 +54,11 @@ export default class RepairConcierge99 extends React.Component {
 
 
              <Item>
-               <Button transparent style={{marginLeft: -1, backgroundColor:'#40BEC4', borderTopLeftRadius:0, borderTopRightRadius:0, flex:1, borderBottomWidth:0,}} onPress={ () => console.log('Info', 'Text touched')}>
+               <Button transparent style={{marginLeft: -1, backgroundColor:'#40BEC4', borderTopLeftRadius:0, borderTopRightRadius:0, flex:1, borderBottomWidth:0,}} onPress={() => {
+                  Actions.carPriceCheckout({
+                    selected: '$99'
+                  })
+                }}>
                <Text style={{  textAlign: 'center', flex:1,  marginTop: -5, color:'#FFFFFF', fontSize:14, }}>Only $99 - Tap here to enroll</Text>
                 </Button>
               </Item>

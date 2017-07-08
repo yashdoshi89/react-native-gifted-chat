@@ -2,6 +2,7 @@ import React , { Component } from 'react';
 import { Button, Header, Container, Content, Card, CardItem, Text, Icon, Right, Left, List, ListItem, Item, InputGroup } from 'native-base';
 import Lightbox from 'react-native-lightbox';
 import {Alert, Image,StyleSheet,View,Dimensions, TouchableOpacity, TouchableHighlight} from 'react-native';
+import { Actions } from 'react-native-router-flux';
 
 const { width, height } = Dimensions.get('window');
 
@@ -38,7 +39,7 @@ export default class PriceCheckout extends React.Component {
             </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
-                <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
+                <Button disabled transparent onPress={ () => console.log('Hi')}>
                   <Image style={{width:20, height:20, padding: 10}} source={require('../../../img/timeIcon.png')}  />
                   <Text ellipsizeMode='tail' numberOfLines={1} style={{color:'#1E2023', fontSize:13, padding:10, marginLeft:55,}}>{this.props.currentMessage.HourTotal} Hrs</Text>
                 </Button>
@@ -58,7 +59,8 @@ export default class PriceCheckout extends React.Component {
             </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0, marginLeft:15,}}>
-              <Button transparent style={{ height:45, padding: 20, borderColor:'#40BEC4', borderWidth: 1, borderRadius: 5,}}>
+              <Button transparent style={{ height:45, padding: 20, borderColor:'#40BEC4', borderWidth: 1, borderRadius: 5,}}
+                onPress={() => Actions.carPriceCheckout({selected: 'DEALER'})}>
                 <Text style={{ padding: 10, color:'#40BEC4', fontSize:13,  }}>BUY NOW </Text>
               </Button>
             </Item>
@@ -109,7 +111,8 @@ export default class PriceCheckout extends React.Component {
             </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0, marginLeft:15,}}>
-              <Button transparent style={{ height:45, padding: 20, borderColor:'#40BEC4', borderWidth: 1, borderRadius: 5,}}>
+              <Button transparent style={{ height:45, padding: 20, borderColor:'#40BEC4', borderWidth: 1, borderRadius: 5,}}
+                onPress={() => Actions.carPriceCheckout({selected: 'SHOP'})}>
                 <Text style={{ padding: 10, color:'#40BEC4', fontSize:13, }}>BUY NOW </Text>
               </Button>
             </Item>
