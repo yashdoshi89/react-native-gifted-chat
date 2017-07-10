@@ -15,6 +15,7 @@ import RepairConcierge39 from './RepairConcierge39';
 import RepairConcierge99 from './RepairConcierge99';
 import PriceCheckout from './PriceCheckout';
 import TypeOfProblem from './RoadsideAssistance';
+import ShareLocation from './ShareLocation';
 import Time from './Time';
 
 import { isSameUser, isSameDay, warnDeprecated } from './utils';
@@ -46,6 +47,17 @@ export default class Bubble extends React.Component {
         return this.props.renderMessageText(messageTextProps);
       }
       return <MessageText {...messageTextProps}/>;
+    }
+    return null;
+  }
+
+  renderShareLocation() {
+    if (this.props.currentMessage.shareLocation) {
+      const {containerStyle, wrapperStyle, ...shareLocationProps} = this.props;
+      if (this.props.renderShareLocation) {
+        return this.props.renderShareLocation(shareLocationProps);
+      }
+      return <ShareLocation {...shareLocationProps}/>;
     }
     return null;
   }
@@ -189,6 +201,7 @@ export default class Bubble extends React.Component {
         >
 
         <View>
+        {this.renderShareLocation()}
         {this.renderMessageHelp()}
         {this.renderMessageRepairConcierge39()}
         {this.renderMessageRepairConcierge99()}
