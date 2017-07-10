@@ -10,32 +10,26 @@ export default class RepairPriceCheck extends React.Component {
     return (
       <View style={[styles.container, this.props.containerStyle]}>
         <List style={{ width: width * .7 }}>
-            <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
+            <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5 }}>
               <Text style={{color:'#1E2023', fontSize:13,margin:15,}}>Ok great. Happy to help! Please provide me the following details:</Text>
             </Item>
 
-            <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
-              <Button transparent onPress={ () => Actions.carYear()}>
-              <Image style={{width:20, height:15, marginRight: 15}} source={require('../../../img/whichCar.png')}  />
-              <Text style={{color:'#1E2023', fontSize:13,}}>{ this.props.currentMessage.selectedCar ? this.props.currentMessage.selectedCar : "Tell us about your car" }</Text>
-               <Right style={{marginLeft:40,}}><Image style={{width:35, height:35,}} source={require('../../../img/forwardClickButton.png')}  /></Right>
-               </Button>
+            <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5, flex: 1, flexDirection: 'row', justifyContent: 'space-between', padding: 5}} onPress={ () => Actions.carYear()}>
+              <Image style={{width:15, height:15,resizeMode: 'contain', marginRight: 15, marginLeft: 10, flex: 1}} source={require('../../../img/whichCar.png')}  />
+              <Text style={{color:'#1E2023', fontSize:13, flex: 6}}>{ this.props.currentMessage.selectedCar ? this.props.currentMessage.selectedCar : "Tell us about your car" }</Text>
+              <Image style={{width:35, height:35, flex: 1 }} source={require('../../../img/forwardClickButton.png')}  />
              </Item>
 
-            <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
-              <Button transparent onPress={ () => Actions.carServiceList()}>
-              <Image style={{width:20, height:20, marginRight: 15}} source={require('../../../img/searchIcon.png')}  />
-              <Text style={{color:'#1E2023', fontSize:13,}}>{ this.props.currentMessage.selectedJob ? this.props.currentMessage.selectedJob : "What type of service are you looking for?" } </Text>
-              <Right style={{marginLeft:41,}}><Image style={{width:35, height:35,}} source={require('../../../img/forwardClickButton.png')}  /></Right>
-               </Button>
+            <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5, flex: 1, maxWidth: width * .7, flexDirection: 'row', justifyContent: 'space-between', padding: 5}} onPress={ () => Actions.carServiceList()}>
+              <Image style={{width:15, height:15,resizeMode: 'contain', marginRight: 15, marginLeft: 10, flex: 1}} source={require('../../../img/searchIcon.png')}  />
+              <Text style={{color:'#1E2023', fontSize:13, flex: 6  }} numberOfLines={2}>{ this.props.currentMessage.selectedJob ? this.props.currentMessage.selectedJob : "What type of service are you looking for?" } </Text>
+              <Image style={{width:35, height:35, flex: 1}} source={require('../../../img/forwardClickButton.png')}  />
              </Item>
 
-            <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0, }}>
-              <Button transparent onPress={ () => console.log('Info', 'Text touched')}>
-              <Image style={{width:18, height:23, marginRight: 15}} source={require('../../../img/locationImage.png')}  />
-              <Text style={{color:'#1E2023', fontSize:13, marginLeft:4,}}>Where is your vehicle {"\n"}located?</Text>
-               <Right style={{marginLeft:35,}}><Image style={{width:35, height:35,}} source={require('../../../img/forwardClickButton.png')}  /></Right>
-               </Button>
+            <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0, flex: 1, flexDirection: 'row', padding: 5}}>
+              <Image style={{width:15, height:15,resizeMode: 'contain', marginRight: 15, marginLeft: 10, flex: 1}} source={require('../../../img/locationImage.png')}  />
+              <Text style={{color:'#1E2023', fontSize:13, flex: 6}}>{ this.props.currentMessage.userLocation ? this.props.currentMessage.userLocation : "Where is your vehicle located?" }</Text>
+              <Image style={{width:35, height:35, justifyContent: 'flex-end', flex: 1}} source={require('../../../img/forwardClickButton.png')}  />
              </Item>
          </List>
        </View>

@@ -119,7 +119,7 @@ export default class PriceCheckout extends React.Component {
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
                <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
                  <Image style={{width:20, height:20, padding: 10}} source={require('../../../img/partsIcon.png')}  />
-                 <Text ellipsizeMode='tail' numberOfLines={1} style={{color:'#1E2023', fontSize:13,  padding:10, textAlign: 'center' }}>$ {this.props.currentMessage.PartsPriceTotal}</Text>
+                 <Text ellipsizeMode='tail' numberOfLines={1} style={{color:'#1E2023', fontSize:13,  padding:10, textAlign: 'center' }}>$ {this.props.currentMessage.PartsPriceTotal ? this.props.currentMessage.PartsPriceTotal : '0'}</Text>
                </Button>
             </Item>
 
