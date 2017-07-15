@@ -22,7 +22,7 @@ export default class RepairPriceCheck extends React.Component {
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5, flex: 1, maxWidth: width * .7, flexDirection: 'row', justifyContent: 'space-between', padding: 5}} onPress={ () => Actions.carServiceList()}>
               <Image style={{width:15, height:15,resizeMode: 'contain', marginRight: 15, marginLeft: 10, flex: 1}} source={require('../../../img/searchIcon.png')}  />
-              <Text style={{color:'#1E2023', fontSize:13, flex: 6  }} numberOfLines={2}>{ this.props.currentMessage.selectedJob ? this.props.currentMessage.selectedJob : "What type of service are you looking for?" } </Text>
+              <Text style={{color:'#1E2023', fontSize:13, flex: 6  }} numberOfLines={2}>{ this.props.currentMessage.selectedJob ? this.props.currentMessage.selectedJob : "What type of service" } </Text>
               <Image style={{width:35, height:35, flex: 1}} source={require('../../../img/forwardClickButton.png')}  />
              </Item>
 
