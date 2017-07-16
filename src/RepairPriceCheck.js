@@ -14,7 +14,7 @@ export default class RepairPriceCheck extends React.Component {
               <Text style={{color:'#1E2023', fontSize:13,margin:15,}}>Ok great. Happy to help! Please provide me the following details:</Text>
             </Item>
 
-            <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5, flex: 1, flexDirection: 'row', justifyContent: 'space-between', padding: 5}} onPress={ () => Actions.carYear()}>
+            <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5, flex: 1, flexDirection: 'row', justifyContent: 'space-between', padding: 5}} onPress={ () => Actions.myGarage()}>
               <Image style={{width:15, height:15,resizeMode: 'contain', marginRight: 15, marginLeft: 10, flex: 1}} source={require('../../../img/whichCar.png')}  />
               <Text style={{color:'#1E2023', fontSize:13, flex: 6}}>{ this.props.currentMessage.selectedCar ? this.props.currentMessage.selectedCar : "Tell us about your car" }</Text>
               <Image style={{width:35, height:35, flex: 1 }} source={require('../../../img/forwardClickButton.png')}  />
