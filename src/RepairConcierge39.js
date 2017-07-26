@@ -26,14 +26,14 @@ export default class RepairConcierge39 extends React.Component {
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
               <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
               <Image style={{width:22, height:22, marginRight: 15}} source={require('../../../img/discountsIcon.png')}  />
-              <Text style={{color:'#1E2023', fontSize:13,}}>20% discount on parts</Text>
+              <Text style={{color:'#1E2023', fontSize:13,}}>Discount on parts</Text>
                </Button>
              </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
               <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
               <Image style={{width:20, height:20, marginRight: 15}} source={require('../../../img/uberCredits.png')}  />
-              <Text style={{color:'#1E2023', fontSize:13,}}>$10 Uber credits</Text>
+              <Text style={{color:'#1E2023', fontSize:13,}}>$10 in Uber credits</Text>
                </Button>
              </Item>
 
@@ -57,7 +57,7 @@ export default class RepairConcierge39 extends React.Component {
                     selected: '$39'
                   })
                 }}>
-                <Text style={{  textAlign: 'center', flex:1,  marginTop: -5, color:'#FFFFFF', fontSize:14, }}>Only $39 - Tap here to enroll</Text>
+                <Text style={{  textAlign: 'center', flex:1,  marginTop: -5, color:'#FFFFFF', fontSize:14, }}>Only $39 - Buy Now</Text>
                 </Button>
               </Item>
          </List>
