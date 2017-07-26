@@ -3,6 +3,7 @@ import {
   Text,
   Clipboard,
   StyleSheet,
+  Dimensions,
   TouchableWithoutFeedback,
   View,
 } from 'react-native';
@@ -18,6 +19,9 @@ import TypeOfProblem from './RoadsideAssistance';
 import ShareLocation from './ShareLocation';
 import Time from './Time';
 
+var width = Dimensions.get('window').width;
+var newWidth = width * 0.7;
+console.log(width);
 import { isSameUser, isSameDay, warnDeprecated } from './utils';
 
 export default class Bubble extends React.Component {
@@ -261,6 +265,7 @@ const styles = {
       marginLeft: 10,
       minHeight: 30,
       padding:5,
+      maxWidth: newWidth,
       justifyContent: 'flex-end',
       shadowColor: '#AAA',
       shadowOffset: {
