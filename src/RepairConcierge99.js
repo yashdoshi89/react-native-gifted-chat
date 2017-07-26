@@ -48,7 +48,7 @@ export default class RepairConcierge99 extends React.Component {
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5, marginTop:20,height:70,}}>
               <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
               <Image style={{width:23, height:20, marginRight: 15}} source={require('../../../img/localMechanic.png')}  />
-              <Text style={{color:'#1E2023', fontSize:13, marginLeft:-2,}}>We work with the local mechanic{"\n"}on your behalf to ensure right{"\n"}diagnostic at the right price.</Text>
+              <Text style={{color:'#1E2023', fontSize:13, marginLeft:-2, width = width*0.53,}}>We work with the local mechanic on your behalf to ensure right diagnostic at the right price.</Text>
                </Button>
              </Item>
 
