@@ -33,7 +33,7 @@ export default class RepairConcierge99 extends React.Component {
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
               <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
               <Image style={{width:20, height:20, marginRight: 15}} source={require('../../../img/uberCredits.png')}  />
-              <Text style={{color:'#1E2023', fontSize:13,}}>10$ Uber credits</Text>
+              <Text style={{color:'#1E2023', fontSize:13,}}>$10 Uber credits</Text>
                </Button>
              </Item>
 
