@@ -13,7 +13,7 @@ export default class RepairConcierge99 extends React.Component {
       <View style={[styles.container, this.props.containerStyle]}>
         <List style={{ width: width * .7 }}>
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5, }}>
-              <Text style={{color:'#1E2023', fontSize:13,margin:14,}}>Your ultimate VIP Repair Concierge  includes the following benefits:</Text>
+              <Text style={{color:'#1E2023', fontSize:13,margin:14,}}>Your annual VIP Repair Concierge  includes the following benefits:</Text>
             </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>

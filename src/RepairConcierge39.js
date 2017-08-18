@@ -13,13 +13,13 @@ export default class RepairConcierge39 extends React.Component {
       <View style={[styles.container, this.props.containerStyle]}>
         <List style={{ width: width * .7 }}>
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
-              <Text style={{color:'#1E2023', fontSize:13,margin:14,}}>Your "One time" VIP Repair Concierge  includes the following benefits:</Text>
+              <Text style={{color:'#1E2023', fontSize:13,margin:14,}}>Your one time VIP Repair Concierge  includes the following benefits:</Text>
             </Item>
 
             <Item style={{borderColor:'#D5D8E1', borderBottomWidth: 0.5,}}>
               <Button disabled transparent onPress={ () => console.log('Info', 'Text touched')}>
               <Image style={{width:23, height:20, marginRight: 15}} source={require('../../../img/warrantyIcon.png')}  />
-              <Text style={{color:'#1E2023', fontSize:13,}}>2 year waranty on repair</Text>
+              <Text style={{color:'#1E2023', fontSize:13,}}>2 year warranty on repair</Text>
                </Button>
              </Item>
 
